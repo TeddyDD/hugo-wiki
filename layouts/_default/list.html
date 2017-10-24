@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<h2 class="taxonomy-title">{{ .Title }}</h2>
+<hr class="big-hr">
+
+<section class="taxonomy-list">
+    <ul class="post-list">
+        {{ range .Data.Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span>
+        </li>
+        {{ end }}
+    </ul>
+</section>

@@ -1,0 +1,57 @@
+
+* {
+    background: #e6e6e6;
+    color: #0f0f0f;
+    margin: 0.5em;
+    font-family: "Slabo 13px", Serif;
+}
+
+/* typography */
+h1 {
+    font-size: 2.3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+a {
+    background: #a4a4a4;
+    display: inline;
+    padding: 0.1em 0.4em 0em 0.4em;
+}
+
+
+/* blog/post list style */
+
+.post-list {
+    list-style-type: none;
+}
+
+.taxonomy-title {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+
+span.date {
+    font-style: italic;
+    display: inline;
+    background: transparent;
+}
+
+.big-hr {
+    color: #0f0f0f;
+    margin-top: 0px;
+    margin-bottom: 1.5em;
+    border-style: none;
+    border-top: 0.3em solid;
+}
+
+/* post */
+.content {
+    font-family: Serif;
+    margin 2em;
+    float: left;
+}
