@@ -1,10 +1,21 @@
+<!DOCTYPE html>
+<html>
 <head>
+    <meta charset="utf-8">
+    <meta name="author" content="{{range .Site.Author }}{{.}}{{end}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{.Hugo.Generator}}
     <title>{{ .Site.Title }}</title>
+
 
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Slabo+13px" rel="stylesheet">
+
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
 
 </head>

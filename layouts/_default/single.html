@@ -1,17 +1,17 @@
-{{ partial "header.html" . }}
+{{ partial "header.html" . }} {{ partial "nav.html" . }}
 
-<article>
-    <h2>
-        {{ .Title }}
-    </h2>
-    <p>Posted on <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00 " | safeHTML }}">
-                {{ .Date.Format "Jan 2, 2006" }} </time>
-    </p>
+<body>
+    <div class="container">
+        <h2>
+            {{ .Title }}
+        </h2>
+        <p><time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00 " | safeHTML }}">
+{{.Date.Format "2006-01-02"}} </time>
+        </p>
+        <section class="content">
+            {{ .Content }}
+        </section>
 
-
-    <section class="content">
-        {{ .Content }}
-    </section>
-
-
-</article>
+    </div>
+    {{ partial "footer.html" . }}
+</body>

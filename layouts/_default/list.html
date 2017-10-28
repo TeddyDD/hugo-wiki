@@ -1,13 +1,23 @@
 {{ partial "header.html" . }}
-<h2 class="taxonomy-title">{{ .Title }}</h2>
-<hr class="big-hr">
 
-<section class="taxonomy-list">
-    <ul class="post-list">
-        {{ range .Data.Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span>
-        </li>
-        {{ end }}
-    </ul>
-</section>
+<body>
+    {{ partial "nav.html" . }}
+
+    <section class="taxonomy-list">
+        <div class="container">
+            <h2 class="taxonomy-title">{{ .Title }} {{ .Type }}</h2>
+            <hr class="big-hr">
+
+            <ul class="post-list">
+                {{ range .Data.Pages }}
+                <li>
+                    <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+
+
+    {{ partial "footer.html" . }}
+</body>

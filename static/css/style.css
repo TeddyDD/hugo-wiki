@@ -1,57 +1,209 @@
-
-* {
-    background: #e6e6e6;
+html,
+body {
     color: #0f0f0f;
-    margin: 0.5em;
-    font-family: "Slabo 13px", Serif;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+    background-color: #ededed;
+    height: 100%;
+    min-height: 100%;
 }
 
-/* typography */
-h1 {
-    font-size: 2.3em;
+
+img {
+    max-width: 100%;
+    max-height: auto;
 }
 
-h2 {
-    font-size: 2em;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
+
+/* links */
 
 a {
-    background: #a4a4a4;
-    display: inline;
-    padding: 0.1em 0.4em 0em 0.4em;
+    color: #0f0f0f;
+    text-decoration: underline;
 }
 
-
-/* blog/post list style */
-
-.post-list {
-    list-style-type: none;
+a:hover {
+    color: #ffffff;
+    background-color: #0f0f0f;
+    text-decoration: none;
 }
 
-.taxonomy-title {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+/* line  */
+
+hr {
+    border-style: none;
+    border-bottom: 3px solid #0f0f0f;
+}
+
+/* logo */
+
+.logo-header {
+    width: 100%;
+    padding: 3em;
+    /* margin: auto; */
+    float:left;
+    padding-top: 2em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1.1em;
+    /* display: block; */
+
+}
+
+.logo-header a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin: auto;
+}
+
+.logo-header img {
+    height: 4em;
+    padding-right: 1em;
+    vertical-align: middle;
+    /* width: auto; */
+    margin: auto;
+    display: inline-block;
+}
+
+/* navigation */
+
+.navigation {
     display: block;
+    vertical-align: middle;
+    margin: 1em;
+    /* padding: 1em; */
+}
+
+.navigation nav a {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    margin-top: 0.3em;
+    padding: 0.5em;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+.ui-hr {
+    padding-top: 0;
+    margin-top: -3px;
+    border-top: 3px solid #0f0f0f;
+}
+
+
+/* quotes */
+
+blockquote {
+    border-left: 3px solid #ccc;
+    margin-left: 1em;
+}
+
+blockquote p {
+    padding-left: 1em;
+}
+
+
+/* footer  */
+footer {
+    background-color: #0f0f0f;
+    color: #ccc;
+    /* margin-top: 3em; */
+    /* padding-top: 1em; */
+    position: relative;
+    clear: both;
+
+}
+
+
+/* table */
+
+/* https://codepen.io/AllThingsSmitty/pen/MyqmdM */
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: auto;
+    font-family: "Ubuntu", sans-serif;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
     text-transform: uppercase;
 }
 
-span.date {
-    font-style: italic;
-    display: inline;
-    background: transparent;
-}
-
-.big-hr {
-    color: #0f0f0f;
-    margin-top: 0px;
-    margin-bottom: 1.5em;
-    border-style: none;
-    border-top: 0.3em solid;
-}
-
-/* post */
-.content {
-    font-family: Serif;
-    margin 2em;
-    float: left;
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: left;
+    }
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
 }
