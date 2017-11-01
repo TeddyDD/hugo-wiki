@@ -7,21 +7,30 @@ body {
     padding: 0;
     margin: 0;
     background-color: #ededed;
-    height: 100%;
-    min-height: 100%;
-}
 
+    /* min-height: 100%; */
+    /* height: auto; */
+    height: 100%;
+    /* min-height: 100%; */
+}
 
 img {
     max-width: 100%;
-    max-height: auto;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
 }
 
 .container {
     width: 80%;
+    height: auto;
     margin: auto;
     overflow: hidden;
+    min-height: 100%;
+    height: auto;
 }
+
+
 
 /* links */
 
@@ -36,11 +45,16 @@ a:hover {
     text-decoration: none;
 }
 
+.image-link:hover{
+    colo: transparent;
+}
+
 /* line  */
 
 hr {
     border-style: none;
     border-bottom: 3px solid #0f0f0f;
+    margin: 0 auto;
 }
 
 /* logo */
@@ -79,14 +93,15 @@ hr {
 
 /* navigation */
 
-.navigation {
+.navigation-container {
     display: block;
     vertical-align: middle;
-    margin: 1em;
+    margin-bottom: 1.5em;
+    /* margin: 1em; */
     /* padding: 1em; */
 }
 
-.navigation nav a {
+.navigation-container nav a {
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -121,13 +136,24 @@ blockquote p {
 
 
 /* footer  */
+
+/* .push { */
+/*     height: 50px; */
+/* } */
+
 footer {
+    /* height: 50px; */
     background-color: #0f0f0f;
     color: #ccc;
+    /* position: absolute; */
+
     /* margin-top: 3em; */
     /* padding-top: 1em; */
-    position: relative;
-    clear: both;
+    /* position: relative; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    /* clear: both; */
 
 }
 

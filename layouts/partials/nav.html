@@ -6,12 +6,15 @@
                 <a href="{{ .Site.BaseURL }}">{{ .Site.Title }} </a>
             </div>
         </section>
+
+
         <section class="navigation">
             <nav class="menu">
 {{ $currentPage := . }} {{ range .Site.Menus.main.ByWeight }}
                 <a class="menu-nav-item{{if or ($currentPage.IsMenuCurrent " main " .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a> {{ end }}
             </nav>
         </section>
+
         <hr class="ui-hr">
     </div>
 </header>
