@@ -29,6 +29,7 @@ copyright = "Jonh Dee 2017"
 pygmentsCodeFences = true
 # https://help.farbox.com/pygments.html
 pygmentsStyle = "manni"
+GoogleAnalytics = 'UA-URCODE'
 
 [author]
     name = "John Dee"
