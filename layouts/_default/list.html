@@ -1,11 +1,12 @@
 {{ define "main" }}
-<h2 class="taxonomy-title">{{ .Title }} {{ .Type }}</h2>
+<h2 class="taxonomy-title">{{ .Title }}</h2>
 <hr class="big-hr">
 
 <ul class="post-list">
     {{ range .Data.Pages }}
     <li>
-        <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span>
+        <a href="{{.Permalink}}">{{.Title}}</a> – <span class="date">{{.Date.Format "2006-01-02"}}</span> <br>
+        {{ partial "tags-span.html" . }}
     </li>
     {{ end }}
 </ul>

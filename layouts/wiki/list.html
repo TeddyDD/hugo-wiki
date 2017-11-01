@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+
+<h2 class="wiki-title">{{ .Type }}</h2>
+<hr>
+
+<h3>Projects</h3>
+
+{{ range .Site.Taxonomies.categories.project }}
+<li>
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+    -
+    <span class="wiki-description"> {{ .Page.Description }}
+    </span>
+    {{ partial "tags-span.html" . }}
+</li>
+{{ end }}
+
+<h3>Notes</h3>
+
+{{ range .Site.Taxonomies.categories.note }}
+<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+{{ partial "tags-span.html" . }}
+</li>
+{{ end }}
+
+{{ end }}

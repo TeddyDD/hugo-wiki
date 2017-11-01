@@ -11,6 +11,7 @@
     <div class="container">
         {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
+        {{ .Content }}
         {{ end }}
     </div>
     {{ partial "footer.html" . }}

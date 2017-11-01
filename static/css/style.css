@@ -8,9 +8,11 @@ body {
     margin: 0;
     background-color: #ededed;
 
-    /* min-height: 100%; */
-    /* height: auto; */
+    min-height: 100%;
+    height: auto;
     height: 100%;
+
+	  line-height: 1.4;
     /* min-height: 100%; */
 }
 
@@ -19,6 +21,8 @@ img {
     max-height: 80vh;
     width: auto;
     height: auto;
+    padding: 0.1em;
+    border: 0;
 }
 
 .container {
@@ -26,8 +30,9 @@ img {
     height: auto;
     margin: auto;
     overflow: hidden;
-    min-height: 100%;
-    height: auto;
+    /* I have no fuck**g idea why this works */
+    min-height: 71%;
+    /* height: auto; */
 }
 
 
@@ -45,8 +50,27 @@ a:hover {
     text-decoration: none;
 }
 
-.image-link:hover{
-    colo: transparent;
+.tags {
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.tag a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.tag a:hover {
+    color: #000;
+    background-color: transparent;
+}
+
+.tag a::before {
+    content: '#'
+}
+
+.img-link:hover{
+    background-color: transparent;
 }
 
 /* line  */
@@ -122,7 +146,6 @@ nav a.active {
     border-top: 3px solid #0f0f0f;
 }
 
-
 /* quotes */
 
 blockquote {
@@ -134,12 +157,6 @@ blockquote p {
     padding-left: 1em;
 }
 
-
-/* footer  */
-
-/* .push { */
-/*     height: 50px; */
-/* } */
 
 footer {
     /* height: 50px; */
@@ -157,6 +174,24 @@ footer {
 
 }
 
+/* post list  */
+.post-list {
+    padding-top: 2em;
+    list-style-type: none;
+}
+
+.post-list li {
+    padding-bottom: 0.5em;
+}
+
+/* wiki list */
+.wiki-title {
+    text-transform: capitalize;
+}
+
+.wiki-description {
+
+}
 
 /* table */
 
@@ -232,4 +267,23 @@ table th {
     table td:last-child {
         border-bottom: 0;
     }
+}
+
+kbd {
+	  margin: 0px 0.1em;
+	  padding: 0.1em 0.6em;
+	  border-radius: 3px;
+	  border: 1px solid rgb(204, 204, 204);
+	  color: rgb(51, 51, 51);
+	  line-height: 1.4;
+	  font-family: Arial,Helvetica,sans-serif;
+	  font-size: 10px;
+	  display: inline-block;
+	  box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
+	  background-color: rgb(247, 247, 247);
+	  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+	  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  text-shadow: 0 1px 0 #fff;
 }
