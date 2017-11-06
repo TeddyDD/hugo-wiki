@@ -57,6 +57,15 @@ sectionPagesMenu = "main"
    weight = -200
 
 ```
+## Favicon
+
+Use https://realfavicongenerator.net/ and put all generated files into
+`static` directory. Set `RealFaviconGenerator` param to true.
+
+``` yaml
+[params]
+   RealFaviconGenerator = true
+```
 
 
 ## Content
