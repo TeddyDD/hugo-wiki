@@ -31,6 +31,11 @@ pygmentsCodeFences = true
 pygmentsStyle = "manni"
 GoogleAnalytics = 'UA-URCODE'
 
+# Optional - output json (for custom search)
+[outputs]
+    home = [ "HTML", "RSS", "JSON"]
+
+
 [author]
     name = "John Dee"
 
